@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminLogin));
             this.GeoTemaLogoLabel = new System.Windows.Forms.Label();
             this.LoginScreenLabel = new System.Windows.Forms.Label();
             this.CreateUserButton = new System.Windows.Forms.Button();
@@ -35,6 +36,9 @@
             this.ModifyUserButton = new System.Windows.Forms.Button();
             this.ShowUsersButton = new System.Windows.Forms.Button();
             this.LogOutButton = new System.Windows.Forms.Button();
+            this.ExitButton = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // GeoTemaLogoLabel
@@ -43,7 +47,7 @@
             this.GeoTemaLogoLabel.BackColor = System.Drawing.Color.Transparent;
             this.GeoTemaLogoLabel.Font = new System.Drawing.Font("Verdana", 20F, System.Drawing.FontStyle.Bold);
             this.GeoTemaLogoLabel.ForeColor = System.Drawing.Color.White;
-            this.GeoTemaLogoLabel.Location = new System.Drawing.Point(61, 10);
+            this.GeoTemaLogoLabel.Location = new System.Drawing.Point(78, 9);
             this.GeoTemaLogoLabel.Name = "GeoTemaLogoLabel";
             this.GeoTemaLogoLabel.Size = new System.Drawing.Size(157, 32);
             this.GeoTemaLogoLabel.TabIndex = 1;
@@ -56,7 +60,7 @@
             this.LoginScreenLabel.BackColor = System.Drawing.Color.Transparent;
             this.LoginScreenLabel.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold);
             this.LoginScreenLabel.ForeColor = System.Drawing.Color.White;
-            this.LoginScreenLabel.Location = new System.Drawing.Point(42, 43);
+            this.LoginScreenLabel.Location = new System.Drawing.Point(83, 40);
             this.LoginScreenLabel.Name = "LoginScreenLabel";
             this.LoginScreenLabel.Size = new System.Drawing.Size(195, 17);
             this.LoginScreenLabel.TabIndex = 2;
@@ -65,7 +69,7 @@
             // 
             // CreateUserButton
             // 
-            this.CreateUserButton.Location = new System.Drawing.Point(42, 81);
+            this.CreateUserButton.Location = new System.Drawing.Point(42, 82);
             this.CreateUserButton.Name = "CreateUserButton";
             this.CreateUserButton.Size = new System.Drawing.Size(102, 32);
             this.CreateUserButton.TabIndex = 3;
@@ -75,7 +79,7 @@
             // 
             // ResetPasswordButton
             // 
-            this.ResetPasswordButton.Location = new System.Drawing.Point(42, 121);
+            this.ResetPasswordButton.Location = new System.Drawing.Point(42, 120);
             this.ResetPasswordButton.Name = "ResetPasswordButton";
             this.ResetPasswordButton.Size = new System.Drawing.Size(102, 32);
             this.ResetPasswordButton.TabIndex = 3;
@@ -85,17 +89,17 @@
             // 
             // ModifyUserButton
             // 
-            this.ModifyUserButton.Location = new System.Drawing.Point(42, 162);
+            this.ModifyUserButton.Location = new System.Drawing.Point(42, 158);
             this.ModifyUserButton.Name = "ModifyUserButton";
             this.ModifyUserButton.Size = new System.Drawing.Size(102, 32);
             this.ModifyUserButton.TabIndex = 3;
-            this.ModifyUserButton.Text = "Modify User";
+            this.ModifyUserButton.Text = "Insert Data";
             this.ModifyUserButton.UseVisualStyleBackColor = true;
             this.ModifyUserButton.Click += new System.EventHandler(this.ModifyUserButton_Click);
             // 
             // ShowUsersButton
             // 
-            this.ShowUsersButton.Location = new System.Drawing.Point(43, 203);
+            this.ShowUsersButton.Location = new System.Drawing.Point(42, 196);
             this.ShowUsersButton.Name = "ShowUsersButton";
             this.ShowUsersButton.Size = new System.Drawing.Size(102, 32);
             this.ShowUsersButton.TabIndex = 3;
@@ -113,22 +117,47 @@
             this.LogOutButton.UseVisualStyleBackColor = true;
             this.LogOutButton.Click += new System.EventHandler(this.LogOutButton_Click);
             // 
+            // ExitButton
+            // 
+            this.ExitButton.Location = new System.Drawing.Point(141, 237);
+            this.ExitButton.Name = "ExitButton";
+            this.ExitButton.Size = new System.Drawing.Size(63, 21);
+            this.ExitButton.TabIndex = 18;
+            this.ExitButton.Text = "Exit";
+            this.ExitButton.UseVisualStyleBackColor = true;
+            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(11, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(74, 65);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
+            // 
             // AdminLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.RoyalBlue;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(284, 271);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.ShowUsersButton);
             this.Controls.Add(this.ModifyUserButton);
             this.Controls.Add(this.ResetPasswordButton);
             this.Controls.Add(this.LogOutButton);
             this.Controls.Add(this.CreateUserButton);
-            this.Controls.Add(this.LoginScreenLabel);
             this.Controls.Add(this.GeoTemaLogoLabel);
+            this.Controls.Add(this.LoginScreenLabel);
             this.Name = "AdminLogin";
             this.Text = "AdminLogin";
             this.Load += new System.EventHandler(this.AdminLogin_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -143,5 +172,7 @@
         private System.Windows.Forms.Button ModifyUserButton;
         private System.Windows.Forms.Button ShowUsersButton;
         private System.Windows.Forms.Button LogOutButton;
+        private System.Windows.Forms.Button ExitButton;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

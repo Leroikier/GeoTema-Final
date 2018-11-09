@@ -42,29 +42,42 @@ namespace GeoTema_final
 
         }
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void ExitButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void ProcedButton_Click(object sender, EventArgs e)
+        {
+            //Åbner AdminLogin vinduet
+            this.Hide();
+            AdminLogin AdminLoginWindow = new AdminLogin();
+            AdminLoginWindow.Show();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        public static string username = "";
+        public static string passw = "";
+        public static string useraccount = "";
+
+        private void AddButton_Click(object sender, EventArgs e)
+        {
+            //For at hente værdier
+            username = UsernameBox.Text;
+            passw = PasswordBox.Text;
+            useraccount = comboBox1.Text;
+
+            SQL sqldatatable = new SQL();
+
+            string statement = "Use fødselsrate_2017 insert into GeotemaUsers values ('" + username + "','" + passw + "','" + useraccount + "')";
+
+            sqldatatable.sqlconnectionInsert(statement);
+
+            MessageBox.Show("Succes User Created");
         }
     }
 }

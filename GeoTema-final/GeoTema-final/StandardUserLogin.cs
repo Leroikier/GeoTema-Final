@@ -16,5 +16,13 @@ namespace GeoTema_final
         {
             InitializeComponent();
         }
+
+        private void LogOutButton_Click(object sender, EventArgs e)
+        {
+            //Åbner LoginScreenStandard vinduet
+            this.Hide();
+            LoginScreenStandard LoginScreenStandard = new LoginScreenStandard();
+            LoginScreenStandard.Show();
+        }
     }
 }
