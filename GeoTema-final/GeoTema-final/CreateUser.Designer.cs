@@ -50,7 +50,7 @@
             this.CreateUserLabel.BackColor = System.Drawing.Color.Transparent;
             this.CreateUserLabel.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold);
             this.CreateUserLabel.ForeColor = System.Drawing.Color.White;
-            this.CreateUserLabel.Location = new System.Drawing.Point(130, 42);
+            this.CreateUserLabel.Location = new System.Drawing.Point(131, 59);
             this.CreateUserLabel.Name = "CreateUserLabel";
             this.CreateUserLabel.Size = new System.Drawing.Size(98, 17);
             this.CreateUserLabel.TabIndex = 8;
@@ -62,7 +62,7 @@
             this.GeoTemaLogoLabel.BackColor = System.Drawing.Color.Transparent;
             this.GeoTemaLogoLabel.Font = new System.Drawing.Font("Verdana", 20F, System.Drawing.FontStyle.Bold);
             this.GeoTemaLogoLabel.ForeColor = System.Drawing.Color.White;
-            this.GeoTemaLogoLabel.Location = new System.Drawing.Point(101, 9);
+            this.GeoTemaLogoLabel.Location = new System.Drawing.Point(102, 26);
             this.GeoTemaLogoLabel.Name = "GeoTemaLogoLabel";
             this.GeoTemaLogoLabel.Size = new System.Drawing.Size(157, 32);
             this.GeoTemaLogoLabel.TabIndex = 7;
@@ -70,14 +70,15 @@
             // 
             // PasswordBox
             // 
-            this.PasswordBox.Location = new System.Drawing.Point(120, 132);
+            this.PasswordBox.Location = new System.Drawing.Point(118, 150);
             this.PasswordBox.Name = "PasswordBox";
             this.PasswordBox.Size = new System.Drawing.Size(119, 20);
             this.PasswordBox.TabIndex = 11;
+            this.PasswordBox.UseSystemPasswordChar = true;
             // 
             // UsernameBox
             // 
-            this.UsernameBox.Location = new System.Drawing.Point(120, 102);
+            this.UsernameBox.Location = new System.Drawing.Point(118, 119);
             this.UsernameBox.Name = "UsernameBox";
             this.UsernameBox.Size = new System.Drawing.Size(119, 20);
             this.UsernameBox.TabIndex = 12;
@@ -88,7 +89,7 @@
             this.PasswordLabel.BackColor = System.Drawing.Color.Transparent;
             this.PasswordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.PasswordLabel.ForeColor = System.Drawing.Color.White;
-            this.PasswordLabel.Location = new System.Drawing.Point(36, 132);
+            this.PasswordLabel.Location = new System.Drawing.Point(34, 150);
             this.PasswordLabel.Name = "PasswordLabel";
             this.PasswordLabel.Size = new System.Drawing.Size(77, 17);
             this.PasswordLabel.TabIndex = 9;
@@ -101,7 +102,7 @@
             this.UsernameLabel.BackColor = System.Drawing.Color.Transparent;
             this.UsernameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.UsernameLabel.ForeColor = System.Drawing.Color.White;
-            this.UsernameLabel.Location = new System.Drawing.Point(32, 103);
+            this.UsernameLabel.Location = new System.Drawing.Point(30, 120);
             this.UsernameLabel.Name = "UsernameLabel";
             this.UsernameLabel.Size = new System.Drawing.Size(81, 17);
             this.UsernameLabel.TabIndex = 10;
@@ -110,7 +111,7 @@
             // 
             // ExitButton
             // 
-            this.ExitButton.Location = new System.Drawing.Point(24, 223);
+            this.ExitButton.Location = new System.Drawing.Point(21, 241);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(75, 23);
             this.ExitButton.TabIndex = 17;
@@ -123,10 +124,10 @@
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "Standard User",
-            "Super User",
-            "Admin User"});
-            this.comboBox1.Location = new System.Drawing.Point(154, 163);
+            "StandardUser",
+            "SuperUser",
+            "AdminUser"});
+            this.comboBox1.Location = new System.Drawing.Point(152, 182);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 18;
@@ -138,7 +139,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(7, 164);
+            this.label1.Location = new System.Drawing.Point(5, 183);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(139, 17);
             this.label1.TabIndex = 9;
@@ -147,17 +148,17 @@
             // 
             // ProcedButton
             // 
-            this.ProcedButton.Location = new System.Drawing.Point(187, 223);
+            this.ProcedButton.Location = new System.Drawing.Point(103, 241);
             this.ProcedButton.Name = "ProcedButton";
             this.ProcedButton.Size = new System.Drawing.Size(75, 23);
             this.ProcedButton.TabIndex = 19;
-            this.ProcedButton.Text = "Proced";
+            this.ProcedButton.Text = "Main menu";
             this.ProcedButton.UseVisualStyleBackColor = true;
             this.ProcedButton.Click += new System.EventHandler(this.ProcedButton_Click);
             // 
             // AddButton
             // 
-            this.AddButton.Location = new System.Drawing.Point(106, 223);
+            this.AddButton.Location = new System.Drawing.Point(185, 241);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(75, 23);
             this.AddButton.TabIndex = 19;
@@ -169,7 +170,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(34, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(35, 21);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(74, 65);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -182,7 +183,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.RoyalBlue;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(284, 271);
+            this.ClientSize = new System.Drawing.Size(284, 286);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.AddButton);
             this.Controls.Add(this.ProcedButton);
@@ -195,6 +196,7 @@
             this.Controls.Add(this.UsernameLabel);
             this.Controls.Add(this.CreateUserLabel);
             this.Controls.Add(this.GeoTemaLogoLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CreateUser";
             this.Text = "CreateUser";
             this.Load += new System.EventHandler(this.CreateUser_Load);

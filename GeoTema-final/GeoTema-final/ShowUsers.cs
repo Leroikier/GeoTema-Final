@@ -20,12 +20,33 @@ namespace GeoTema_final
             InitializeComponent();
         }
 
+        string type = LoginScreenStandard.type;
+
         private void ProcedButton_Click(object sender, EventArgs e)
         {
-            //Åbner AdminLogin vinduet
-            this.Hide();
-            AdminLogin AdminLoginWindow = new AdminLogin();
-            AdminLoginWindow.Show();
+            if (type == "AdminUser")
+            {
+                //Åbner AdminLogin vinduet
+                this.Hide();
+                AdminLogin AdminLoginWindow = new AdminLogin();
+                AdminLoginWindow.Show();
+            }
+            else if (type == "SuperUser")
+            {
+                //Åbner Superuser vinduet
+                this.Hide();
+                SuperUserLogin SuperuserLogin = new SuperUserLogin();
+                SuperuserLogin.Show();
+            }
+            else if (type == "StandardUser")
+            {
+                //Åbner Stanadrduser vinduet
+                this.Hide();
+                StandardUserLogin StandardUserLogin = new StandardUserLogin();
+                StandardUserLogin.Show();
+            }
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -38,12 +59,12 @@ namespace GeoTema_final
 
         }
 
+        //Standard view af tables
         private void ShowDataButton_Click(object sender, EventArgs e)
         {
-            //dataGridView1.Columns[0].Visible = false;
-
             using (SqlConnection sqlCon = new SqlConnection(ConnectionString))
             {
+                //den her metode viser/fylder data gridviewet
                 sqlCon.Open();
                 SqlDataAdapter sqlDa = new SqlDataAdapter("Select Land.id, Land.land, Land.verdensdel, Rang.rang, Rang.fødselsrate from Land, Rang Where Land.id=Rang.id", sqlCon);
                 DataTable dtbl = new DataTable();
@@ -52,6 +73,34 @@ namespace GeoTema_final
                 bindingSource.DataSource = dtbl;
                 dataGridView1.DataSource = bindingSource;
             }
+        }
+
+        //Søjle diagrammet
+        private void button2_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection sqlCon = new SqlConnection(ConnectionString))
+            {
+                //Den her metode viser/fylder søjle diagrammet
+                sqlCon.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter("Select Land.land, Land.verdensdel, Rang.rang, Rang.fødselsrate from Land, Rang Where Land.id=Rang.id", sqlCon);
+                DataSet dts = new DataSet();
+                sqlDa.Fill(dts);
+                chart1.DataSource = dts;
+                chart1.Series[0].XValueMember = "land";
+                chart1.Series[0].YValueMembers = "fødselsrate";
+                chart1.ChartAreas[0].AxisX.LabelStyle.Interval = 1;
+                chart1.DataBind();
+            }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void chart1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

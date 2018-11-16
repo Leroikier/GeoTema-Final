@@ -17,12 +17,25 @@ namespace GeoTema_final
             InitializeComponent();
         }
 
+        //Variabel
+        string type = LoginScreenStandard.type;
+
         private void ProcedButton_Click(object sender, EventArgs e)
         {
-            //Åbner AdminLogin vinduet
-            this.Hide();
-            AdminLogin AdminLoginWindow = new AdminLogin();
-            AdminLoginWindow.Show();
+            if (type == "AdminUser")
+            {
+                //Åbner AdminLogin vinduet
+                this.Hide();
+                AdminLogin AdminLoginWindow = new AdminLogin();
+                AdminLoginWindow.Show();
+            }
+            else if (type == "SuperUser")
+            {
+                //Åbner Superuser vinduet
+                this.Hide();
+                SuperUserLogin SuperuserLogin = new SuperUserLogin();
+                SuperuserLogin.Show();
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -61,10 +74,11 @@ namespace GeoTema_final
             land = textBox3.Text;
             verdensdel = comboBox2.Text;
             rang = textBox1.Text;
-            fødselsrate = textBox2.Text;
+            fødselsrate = textBox2.Text.Replace(",","."); //.Replace erstatter "," med "."
 
             SQL sqldatatable = new SQL();
 
+            //Insert statement
             string statement = "Use fødselsrate_2017 insert into Land values ('" + land + "','" + verdensdel + "') insert into Rang values ('" + rang + "','" + fødselsrate + "')";
 
             sqldatatable.sqlconnectionInsert(statement);

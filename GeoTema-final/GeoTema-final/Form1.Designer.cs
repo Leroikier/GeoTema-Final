@@ -47,7 +47,7 @@
             this.GeoTemaLogoLabel.BackColor = System.Drawing.Color.Transparent;
             this.GeoTemaLogoLabel.Font = new System.Drawing.Font("Verdana", 20F, System.Drawing.FontStyle.Bold);
             this.GeoTemaLogoLabel.ForeColor = System.Drawing.Color.White;
-            this.GeoTemaLogoLabel.Location = new System.Drawing.Point(99, 10);
+            this.GeoTemaLogoLabel.Location = new System.Drawing.Point(99, 25);
             this.GeoTemaLogoLabel.Name = "GeoTemaLogoLabel";
             this.GeoTemaLogoLabel.Size = new System.Drawing.Size(157, 32);
             this.GeoTemaLogoLabel.TabIndex = 0;
@@ -59,7 +59,7 @@
             this.LoginScreenLabel.BackColor = System.Drawing.Color.Transparent;
             this.LoginScreenLabel.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold);
             this.LoginScreenLabel.ForeColor = System.Drawing.Color.White;
-            this.LoginScreenLabel.Location = new System.Drawing.Point(124, 41);
+            this.LoginScreenLabel.Location = new System.Drawing.Point(124, 56);
             this.LoginScreenLabel.Name = "LoginScreenLabel";
             this.LoginScreenLabel.Size = new System.Drawing.Size(109, 17);
             this.LoginScreenLabel.TabIndex = 0;
@@ -71,7 +71,7 @@
             this.UsernameLabel.BackColor = System.Drawing.Color.Transparent;
             this.UsernameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.UsernameLabel.ForeColor = System.Drawing.Color.White;
-            this.UsernameLabel.Location = new System.Drawing.Point(33, 110);
+            this.UsernameLabel.Location = new System.Drawing.Point(27, 132);
             this.UsernameLabel.Name = "UsernameLabel";
             this.UsernameLabel.Size = new System.Drawing.Size(81, 17);
             this.UsernameLabel.TabIndex = 1;
@@ -83,7 +83,7 @@
             this.PasswordLabel.BackColor = System.Drawing.Color.Transparent;
             this.PasswordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.PasswordLabel.ForeColor = System.Drawing.Color.White;
-            this.PasswordLabel.Location = new System.Drawing.Point(37, 152);
+            this.PasswordLabel.Location = new System.Drawing.Point(31, 174);
             this.PasswordLabel.Name = "PasswordLabel";
             this.PasswordLabel.Size = new System.Drawing.Size(77, 17);
             this.PasswordLabel.TabIndex = 1;
@@ -91,7 +91,7 @@
             // 
             // Usernamebox
             // 
-            this.Usernamebox.Location = new System.Drawing.Point(120, 109);
+            this.Usernamebox.Location = new System.Drawing.Point(114, 131);
             this.Usernamebox.Name = "Usernamebox";
             this.Usernamebox.Size = new System.Drawing.Size(119, 20);
             this.Usernamebox.TabIndex = 2;
@@ -99,15 +99,16 @@
             // 
             // Passwordbox
             // 
-            this.Passwordbox.Location = new System.Drawing.Point(120, 152);
+            this.Passwordbox.Location = new System.Drawing.Point(114, 174);
             this.Passwordbox.Name = "Passwordbox";
             this.Passwordbox.Size = new System.Drawing.Size(119, 20);
             this.Passwordbox.TabIndex = 2;
+            this.Passwordbox.UseSystemPasswordChar = true;
             // 
             // LoginButton
             // 
             this.LoginButton.BackColor = System.Drawing.Color.White;
-            this.LoginButton.Location = new System.Drawing.Point(162, 210);
+            this.LoginButton.Location = new System.Drawing.Point(162, 236);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.Size = new System.Drawing.Size(57, 24);
             this.LoginButton.TabIndex = 3;
@@ -118,11 +119,11 @@
             // Cancelbutton
             // 
             this.Cancelbutton.BackColor = System.Drawing.Color.White;
-            this.Cancelbutton.Location = new System.Drawing.Point(67, 210);
+            this.Cancelbutton.Location = new System.Drawing.Point(67, 236);
             this.Cancelbutton.Name = "Cancelbutton";
             this.Cancelbutton.Size = new System.Drawing.Size(57, 24);
             this.Cancelbutton.TabIndex = 4;
-            this.Cancelbutton.Text = "Cancel";
+            this.Cancelbutton.Text = "Exit";
             this.Cancelbutton.UseVisualStyleBackColor = false;
             this.Cancelbutton.Click += new System.EventHandler(this.Cancelbutton_Click);
             // 
@@ -130,7 +131,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(32, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(32, 19);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(74, 65);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -143,7 +144,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.RoyalBlue;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(284, 271);
+            this.ClientSize = new System.Drawing.Size(284, 286);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.GeoTemaLogoLabel);
             this.Controls.Add(this.Cancelbutton);
@@ -153,6 +154,7 @@
             this.Controls.Add(this.PasswordLabel);
             this.Controls.Add(this.UsernameLabel);
             this.Controls.Add(this.LoginScreenLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LoginScreenStandard";
             this.Text = "Login screen";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

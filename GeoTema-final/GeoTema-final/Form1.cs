@@ -20,6 +20,7 @@ namespace GeoTema_final
 
         public static string username = "";
         public static string passw = "";
+        public static string type;
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
@@ -28,10 +29,14 @@ namespace GeoTema_final
 
             SQL sqldatatable = new SQL();
 
-            string constring = "select useraccount From GeotemaUsers where username ='" + LoginScreenStandard.username + "' And passw ='" + LoginScreenStandard.passw + "'";
+            //Login stringen som styrer hvor den kigger på om brugere eksitere //Samtidig er det sikret i mod simpel SQL injection
+            string constring = "use fødselsrate_2017 select useraccount From GeotemaUsers where username = @username And passw = @passw";
 
-            string userAccounts = sqldatatable.sqlconnection(constring);
+            string userAccounts = sqldatatable.sqlconnection(constring, username, passw);
 
+            type = userAccounts;
+
+            //Alt efter hvilken user der logger ind åbnes det ønskede vindue
             switch (userAccounts)
             {
                 case "AdminUser":

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,19 @@ namespace GeoTema_final
             this.Hide();
             LoginScreenStandard LoginScreenStandard = new LoginScreenStandard();
             LoginScreenStandard.Show();
+        }
+
+        private void ShowUsersButton_Click(object sender, EventArgs e)
+        {
+            //Åbner Showuser vinduet
+            this.Hide();
+            ShowUsersWindow ShowUsers = new ShowUsersWindow();
+            ShowUsers.Show();
+        }
+
+        private void ExitButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

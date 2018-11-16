@@ -52,7 +52,7 @@
             this.ShowDataLabel.BackColor = System.Drawing.Color.Transparent;
             this.ShowDataLabel.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold);
             this.ShowDataLabel.ForeColor = System.Drawing.Color.White;
-            this.ShowDataLabel.Location = new System.Drawing.Point(125, 41);
+            this.ShowDataLabel.Location = new System.Drawing.Point(125, 57);
             this.ShowDataLabel.Name = "ShowDataLabel";
             this.ShowDataLabel.Size = new System.Drawing.Size(95, 17);
             this.ShowDataLabel.TabIndex = 14;
@@ -64,7 +64,7 @@
             this.GeoTemaLogoLabel.BackColor = System.Drawing.Color.Transparent;
             this.GeoTemaLogoLabel.Font = new System.Drawing.Font("Verdana", 20F, System.Drawing.FontStyle.Bold);
             this.GeoTemaLogoLabel.ForeColor = System.Drawing.Color.White;
-            this.GeoTemaLogoLabel.Location = new System.Drawing.Point(93, 9);
+            this.GeoTemaLogoLabel.Location = new System.Drawing.Point(93, 25);
             this.GeoTemaLogoLabel.Name = "GeoTemaLogoLabel";
             this.GeoTemaLogoLabel.Size = new System.Drawing.Size(157, 32);
             this.GeoTemaLogoLabel.TabIndex = 13;
@@ -76,7 +76,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(73, 81);
+            this.label1.Location = new System.Drawing.Point(72, 105);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 20);
             this.label1.TabIndex = 15;
@@ -88,7 +88,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(28, 113);
+            this.label2.Location = new System.Drawing.Point(27, 137);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(98, 20);
             this.label2.TabIndex = 15;
@@ -106,7 +106,7 @@
             "Oceanien",
             "Sydamerika",
             "Asien/Europa"});
-            this.comboBox2.Location = new System.Drawing.Point(129, 114);
+            this.comboBox2.Location = new System.Drawing.Point(128, 138);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 16;
@@ -118,7 +118,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(69, 143);
+            this.label4.Location = new System.Drawing.Point(68, 167);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 20);
             this.label4.TabIndex = 15;
@@ -126,7 +126,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(129, 145);
+            this.textBox1.Location = new System.Drawing.Point(128, 169);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(121, 20);
             this.textBox1.TabIndex = 17;
@@ -138,7 +138,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(25, 174);
+            this.label5.Location = new System.Drawing.Point(24, 198);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(101, 20);
             this.label5.TabIndex = 15;
@@ -146,7 +146,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(129, 175);
+            this.textBox2.Location = new System.Drawing.Point(128, 199);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(121, 20);
             this.textBox2.TabIndex = 18;
@@ -154,17 +154,17 @@
             // 
             // ProcedButton
             // 
-            this.ProcedButton.Location = new System.Drawing.Point(195, 221);
+            this.ProcedButton.Location = new System.Drawing.Point(104, 245);
             this.ProcedButton.Name = "ProcedButton";
             this.ProcedButton.Size = new System.Drawing.Size(75, 23);
             this.ProcedButton.TabIndex = 40;
-            this.ProcedButton.Text = "Proced";
+            this.ProcedButton.Text = "Main menu";
             this.ProcedButton.UseVisualStyleBackColor = true;
             this.ProcedButton.Click += new System.EventHandler(this.ProcedButton_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(13, 221);
+            this.button1.Location = new System.Drawing.Point(12, 245);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 41;
@@ -174,7 +174,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(104, 221);
+            this.button2.Location = new System.Drawing.Point(196, 245);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 42;
@@ -184,7 +184,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(129, 82);
+            this.textBox3.Location = new System.Drawing.Point(128, 106);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(121, 20);
             this.textBox3.TabIndex = 43;
@@ -194,7 +194,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(26, 5);
+            this.pictureBox1.Location = new System.Drawing.Point(26, 21);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(74, 65);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -207,7 +207,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.RoyalBlue;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(284, 271);
+            this.ClientSize = new System.Drawing.Size(284, 286);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.button2);
@@ -222,6 +222,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ShowDataLabel);
             this.Controls.Add(this.GeoTemaLogoLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "InsertData";
             this.Text = "InsertData";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

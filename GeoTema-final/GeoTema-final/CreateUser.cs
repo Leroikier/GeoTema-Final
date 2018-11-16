@@ -47,12 +47,24 @@ namespace GeoTema_final
             this.Close();
         }
 
+        string type = LoginScreenStandard.type;
+
         private void ProcedButton_Click(object sender, EventArgs e)
         {
-            //Åbner AdminLogin vinduet
-            this.Hide();
-            AdminLogin AdminLoginWindow = new AdminLogin();
-            AdminLoginWindow.Show();
+            if (type == "AdminUser")
+            {
+                //Åbner AdminLogin vinduet
+                this.Hide();
+                AdminLogin AdminLoginWindow = new AdminLogin();
+                AdminLoginWindow.Show();
+            }
+            else if (type == "SuperUser")
+            {
+                //Åbner Superuser vinduet
+                this.Hide();
+                SuperUserLogin SuperuserLogin = new SuperUserLogin();
+                SuperuserLogin.Show();
+            }
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -71,11 +83,34 @@ namespace GeoTema_final
             passw = PasswordBox.Text;
             useraccount = comboBox1.Text;
 
-            SQL sqldatatable = new SQL();
+            //Forbindelse til databasen
+            SQL sqldatatablecon = new SQL();
 
-            string statement = "Use fødselsrate_2017 insert into GeotemaUsers values ('" + username + "','" + passw + "','" + useraccount + "')";
+            string statement = "";
 
-            sqldatatable.sqlconnectionInsert(statement);
+            switch (useraccount)
+            {
+                case "AdminUser":
+                    {
+                        //For at create et login via username og password, ændre i server rollen, så Adminbruger kan tilføje medlemmer og derefter tilføjer brugeren til tablet samtidig, og til sidst tilføjer til AdminUser (SQL)brugerdelen
+                        statement = "use master Create login " + username + " with password = '" + passw + "' alter server role AdminBruger add member " + username + " use fødselsrate_2017 create user " + username + " From login " + username + " alter role AdminUser add member " + username;
+                        break;
+                    }
+                case "SuperUser":
+                    {
+                        statement = "use master Create login " + username + " with password = '" + passw + "' use fødselsrate_2017 create user " + username + " From login " + username + " alter role SuperUser add member " + username;
+                        break;
+                    }
+                case "StandardUser":
+                    {
+                        statement = "use master Create login " + username + " with password = '" + passw + "' use fødselsrate_2017 create user " + username + " From login " + username + " alter role StandardUser add member " + username;
+                        break;
+                    }                
+            }
+            //insert statementen
+            string statement1 = "Use fødselsrate_2017 insert into GeotemaUsers values ('" + username + "','" + passw + "','" + useraccount + "')";
+            sqldatatablecon.sqlconnectionInsert(statement);
+            sqldatatablecon.sqlconnectionInsert(statement1);
 
             MessageBox.Show("Succes User Created");
         }
