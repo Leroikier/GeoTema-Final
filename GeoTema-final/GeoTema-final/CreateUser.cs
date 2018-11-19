@@ -113,6 +113,11 @@ namespace GeoTema_final
             sqldatatablecon.sqlconnectionInsert(statement1);
 
             MessageBox.Show("Succes User Created");
+
+            //Åbner CreateUser vinduet
+            this.Hide();
+            CreateUser CreateUser = new CreateUser();
+            CreateUser.Show();
         }
     }
 }
