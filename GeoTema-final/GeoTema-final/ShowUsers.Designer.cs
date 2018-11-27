@@ -53,7 +53,7 @@
             this.ShowDataLabel.BackColor = System.Drawing.Color.Transparent;
             this.ShowDataLabel.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold);
             this.ShowDataLabel.ForeColor = System.Drawing.Color.White;
-            this.ShowDataLabel.Location = new System.Drawing.Point(493, 52);
+            this.ShowDataLabel.Location = new System.Drawing.Point(510, 53);
             this.ShowDataLabel.Name = "ShowDataLabel";
             this.ShowDataLabel.Size = new System.Drawing.Size(147, 17);
             this.ShowDataLabel.TabIndex = 12;
@@ -65,7 +65,7 @@
             this.GeoTemaLogoLabel.BackColor = System.Drawing.Color.Transparent;
             this.GeoTemaLogoLabel.Font = new System.Drawing.Font("Verdana", 20F, System.Drawing.FontStyle.Bold);
             this.GeoTemaLogoLabel.ForeColor = System.Drawing.Color.White;
-            this.GeoTemaLogoLabel.Location = new System.Drawing.Point(488, 19);
+            this.GeoTemaLogoLabel.Location = new System.Drawing.Point(505, 20);
             this.GeoTemaLogoLabel.Name = "GeoTemaLogoLabel";
             this.GeoTemaLogoLabel.Size = new System.Drawing.Size(157, 32);
             this.GeoTemaLogoLabel.TabIndex = 11;
@@ -126,7 +126,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(421, 14);
+            this.pictureBox1.Location = new System.Drawing.Point(438, 15);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(74, 65);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
